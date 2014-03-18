@@ -51,6 +51,7 @@ basedir=`pwd`
   echo "Start Building, Installing and Running terracotta server"  
   ########################## INSTALLATION ####################################
   ### Patching terracotta
+  cp quartz/pom.xml quartz-2.2.1/quartz
   echo "Patching terracotta..."
   cd $basedir/terracotta-runtime-4.1.1
   patch -p0 < $basedir/terracotta-4.1.1-build.patch

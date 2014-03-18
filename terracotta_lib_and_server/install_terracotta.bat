@@ -32,22 +32,16 @@ svn --version >nul 2>&1 && (
 				)
 				
 				REM Script for patching and installing
+				xcopy quartz\pom.xml quartz-2.2.1\quartz
 				cd terracotta-runtime-4.1.1
 				patch -p0 < %BASEDIR%terracotta-4.1.1-build.patch --binary
 				set MAVEN_OPTS=-Xmx512m -XX:MaxPermSize=128m
-				echo "Build EHCache...Press any key"
-				pause > null
 				cd ../ehcache-2.8.1
 				mvn install -DskipTests
-				echo "Build quartz...Press any key"
-				pause > null
 				cd ../quartz-2.2.1
 				mvn install -DskipTests
-				echo "Build terracotta...Press any key"
-				pause > null
 				cd ../terracotta-runtime-4.1.1
 				mvn install -DskipTests
-				echo "Start terracotta server...Press any key"
 				cd deploy
 				mvn exec:exec -P start-server
 			) || ( 
