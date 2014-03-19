@@ -17,10 +17,14 @@ svn --version >nul 2>&1 && (
 				if not exist terracotta-runtime-4.1.1 (
 					echo Check out Terracotta...
 					svn checkout http://svn.terracotta.org/svn/tc/dso/tags/4.1.1 terracotta-runtime-4.1.1
+					cd terracotta-runtime-4.1.1
+					patch -p0 < %BASEDIR%terracotta-4.1.1-build.patch --binary
+					cd ..
 				)
 				if not exist quartz-2.2.1 (
 					echo Check out Quartz...
 					svn checkout http://svn.terracotta.org/svn/quartz/tags/quartz-2.2.1
+					xcopy %BASEDIR%quartz\pom.xml quartz-2.2.1\quartz
 				)
 				if not exist ehcache-2.8.1 (
 					echo Check out Ehcache...
@@ -32,15 +36,12 @@ svn --version >nul 2>&1 && (
 				)
 				
 				REM Script for patching and installing
-				xcopy quartz\pom.xml quartz-2.2.1\quartz
-				cd terracotta-runtime-4.1.1
-				patch -p0 < %BASEDIR%terracotta-4.1.1-build.patch --binary
 				set MAVEN_OPTS=-Xmx512m -XX:MaxPermSize=128m
-				cd ../ehcache-2.8.1
+				cd %BASEDIR%ehcache-2.8.1
 				mvn install -DskipTests
-				cd ../quartz-2.2.1
+				cd %BASEDIR%quartz-2.2.1
 				mvn install -DskipTests
-				cd ../terracotta-runtime-4.1.1
+				cd %BASEDIR%terracotta-runtime-4.1.1
 				mvn install -DskipTests
 				cd deploy
 				mvn exec:exec -P start-server
