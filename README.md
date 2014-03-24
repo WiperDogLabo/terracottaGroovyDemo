@@ -1,4 +1,5 @@
-TerraCottaに関して色々な調査していますが、最新結果は以下のものがあります(調査時点で順番します)：      
+TerraCottaに関して色々な調査していますが、最新結果は以下のものがあります(調査時点で順番します)：  
+
 1.   terracottaGroovyPrj:　  
 GroovyProjectでTerracottaを使って、Jobを作成して、実行できたものです。    
 EclipseにImportして、GroovyScriptでファイルをBuiltするのはいいです。      
