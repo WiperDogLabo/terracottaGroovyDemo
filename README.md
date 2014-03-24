@@ -2,13 +2,17 @@ TerraCotta‚ÉŠÖ‚µ‚ÄFX‚È’²¸‚µ‚Ä‚¢‚Ü‚·‚ªAÅVŒ‹‰Ê‚ÍˆÈ‰º‚Ì‚à‚Ì‚ª‚ ‚è‚Ü‚·(’²¸“
 1. terracottaGroovyPrj:@  
 * GroovyProject‚ÅTerracotta‚ğg‚Á‚ÄAJob‚ğì¬‚µ‚ÄAÀs‚Å‚«‚½‚à‚Ì‚Å‚·B    
 * Eclipse‚ÉImport‚µ‚ÄAGroovyScript‚Åƒtƒ@ƒCƒ‹‚ğBuilt‚·‚é‚Ì‚Í‚¢‚¢‚Å‚·B      
+
 2. demoTerracottaBundle & demoTerracottaOSGIF      
 * demoTerracottaBundle‚ÍMaven Project‚Å‚·Bˆ—“à—e‚Æ‚µ‚Ä‚Í‚±‚ÌProject‚ªterracottaGroovyPrj‚Æ‚¿‚å‚Á‚Æ“¯‚¶‚Å‚·‚ªAMaven@BundleŒ`‚ÅBuilt‚³‚ê‚Ü‚·B      
 * demoTerracottaOSGIFOSGIŠÂ‹«‚ÅAterracottaWithGroovy@Bundle‚ğg‚¤‚à‚Ì‚Å‚·B      
+
 3. terracottaWithWiperdogF      
-* Wiperdog{Terracotta‚ğg‚¤‚½‚ß‚Ìsetup script‚Æ•K—v‚È‚à‚Ì‚Å‚·B      
+* Wiperdog{Terracotta‚ğg‚¤‚½‚ß‚Ìsetup script‚Æ•K—v‚È‚à‚Ì‚Å‚·B  
+    
 4. terracottaWithWiperdogMultiProcess      
 * Fork‚ğTerracotta‚ÆÀs‚Å‚«‚é‚½‚ß‚Ì•ÏX‚µ‚½‚à‚Ì‚Å‚·      
+
 5. terracotta_lib_and_server:       
 * ˆÈ‰º‚Ì‚à‚Ì‚ğ‚â‚éScript‚ª‚ ‚è‚Ü‚·F      
 * SVN‚©‚çTerraCotta Opensource‚ğæ“¾‚·‚éBi‚Ü‚¾Checkout‚µ‚Ä‚¢‚È‚¢ê‡j      
